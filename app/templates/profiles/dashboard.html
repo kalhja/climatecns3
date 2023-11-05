@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block page_content %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 m-4">
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-plus-circle text-blue-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">Add Record</h3>
+		<a href="{{ url_for('profiles.add_record') }}" class="inline-block bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-500 transition duration-300">Add a Record</a>
+	</div>
+
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-calendar-plus text-green-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">Create New Event</h3>
+		<a href="{{ url_for('profiles.create_event') }}" class="inline-block bg-green-600 text-white py-2 px-6 rounded-md hover-bg-green-500 transition duration-300">Create an Event</a>
+	</div>
+
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-list-alt text-indigo-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">View My Records</h3>
+		<a href="{{ url_for('profiles.records') }}" class="inline-block bg-indigo-600 text-white py-2 px-6 rounded-md hover:bg-indigo-500 transition duration-300">View My Records</a>
+	</div>
+
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-calendar text-yellow-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">View My Events</h3>
+		<a href="{{ url_for('profiles.events') }}" class="inline-block bg-yellow-600 text-white py-2 px-6 rounded-md hover:bg-yellow-500 transition duration-300">View My Events</a>
+	</div>
+
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-table text-red-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">View All Records</h3>
+		<a href="{{ url_for('profiles.all_records') }}" class="inline-block bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-500 transition duration-300">View All Records</a>
+	</div>
+
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-calendar-alt text-purple-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">View All Events</h3>
+		<a href="{{ url_for('profiles.all_events') }}" class="inline-block bg-purple-600 text-white py-2 px-6 rounded-md hover:bg-purple-500 transition duration-300">View All Events</a>
+	</div>
+
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-map-marked-alt text-blue-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">View Records Map</h3>
+		<a href="{{ url_for('analytics.records_map') }}" class="inline-block bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-500 transition duration-300">View Records Map</a>
+	</div>
+
+	<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+		<i class="fas fa-map-marker-alt text-green-600 text-4xl mb-4"></i>
+		<h3 class="text-xl font-semibold mb-4">View Events Map</h3>
+		<a href="{{ url_for('analytics.events_map') }}" class="inline-block bg-green-600 text-white py-2 px-6 rounded-md hover:bg-green-500 transition duration-300">View Events Map</a>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'analytics/mapping.html' %}
+
+{% block page_content %}
+{{ super() }}
+<script src = "{{ url_for("static", filename = "js/analytics/events_map.js") }}"></script>
+{% endblock %}
